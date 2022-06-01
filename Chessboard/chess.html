@@ -1,0 +1,140 @@
+<html  lang="fr">
+ 
+<head>
+<link rel="stylesheet" type="text/css" href="chess.css">
+<title> Chess </title>
+</head>
+ 
+<body>
+    
+ 
+<div class="input">
+    <FORM NAME="form1">
+        <INPUT TYPE="text" class="txt" name="input" VALUE="" requiredminlength="4" maxlength="4" size="6"><BR>
+        <INPUT TYPE="button" class="btn" name="bouton" VALUE="Submit" onClick="controle(form1)" >
+    </FORM> 
+</div>
+ 
+ 
+ 
+ 
+<table id="plateau" cellspacing = "0" cellpadding="20"> <!--cellpadding et cellspacing pour retirer les bordures-->
+ 
+ <tr>
+        <div class="yc">
+            <h1>8</h1>
+            <h1>7</h1>
+            <h1>6</h1>
+            <h1>5</h1>
+            <h1>4</h1>
+            <h1>3</h1>
+            <h1>2</h1>
+            <h1>1</h1>
+        </div>
+ </tr>
+
+<tr class="repaire">8
+    <td class="repaire">A</td class="repaire">
+    <td class="repaire">B</td class="repaire">
+    <td class="repaire">C</td class="repaire">
+    <td class="repaire">D</td class="repaire">
+    <td class="repaire">E</td class="repaire">
+    <td class="repaire">F</td class="repaire">
+    <td class="repaire">G</td class="repaire">
+    <td class="repaire">H</td class="repaire">
+</tr>      
+    
+<tr> 
+<td class="blanc"><input class="blanc" type="number" alt="piece"  id="case00" /></td>
+<td class="noir"><input class="noir" type="number" alt="piece"  id="case01" /></td>
+<td class="blanc"><input class="blanc" type="number" alt="piece"  id="case02" /></td>
+<td class="noir"><input class="noir" type="number" alt="piece"  id="case03" /></td>
+<td class="blanc"><input class="blanc" type="number" alt="piece"  id="case04" /></td>
+<td class="noir"><input class="noir" type="number" alt="piece"  id="case05" /></td>
+<td class="blanc"><input class="blanc" type="number" alt="piece"  id="case06" /></td>
+<td class="noir"><input class="noir" type="number" alt="piece"  id="case07" /></td>
+</tr>
+ 
+<tr > 
+<td class="noir"><input class="noir" type="number" alt="piece"  id="case10" /></td>
+<td class="blanc"><input class="blanc" type="number" alt="piece"  id="case11" /></td>
+<td class="noir"><input class="noir" type="number" alt="piece"  id="case12" /></td>
+<td class="blanc"><input class="blanc" type="number" alt="piece"  id="case13" /></td>
+<td class="noir"><input class="noir" type="number" alt="piece"  id="case14" /></td>
+<td class="blanc"><input class="blanc" type="number" alt="piece"  id="case15" /></td>
+<td class="noir"><input class="noir" type="number" alt="piece"  id="case16" /></td>
+<td class="blanc"><input class="blanc" type="number" alt="piece"  id="case17" /></td>
+</tr>
+ 
+<tr> 
+<td class="blanc"><input class="blanc" type="number" alt="vide"  id="case20" /></td>
+<td class="noir"><input class="noir" type="number" alt="vide"  id="case21" /></td>
+<td class="blanc"><input class="blanc" type="number" alt="vide"  id="case22" /></td>
+<td class="noir"><input class="noir" type="number" alt="vide"  id="case23" /></td>
+<td class="blanc"><input class="blanc" type="number" alt="vide"  id="case24" /></td>
+<td class="noir"><input class="noir" type="number" alt="vide"  id="case25" /></td>
+<td class="blanc"><input class="blanc" type="number" alt="vide"  id="case26" /></td>
+<td class="noir"><input class="noir" type="number" alt="vide"  id="case27" /></td>
+</tr>
+ 
+<tr> 
+<td class="noir"><input class="noir" type="number" alt="vide"  id="case30" /></td>
+<td class="blanc"><input class="blanc" type="number" alt="vide"  id="case31" /></td>
+<td class="noir"><input class="noir" type="number" alt="vide"  id="case32" /></td>
+<td class="blanc"><input class="blanc" type="number" alt="vide"  id="case33" /></td>
+<td class="noir"><input class="noir" type="number" alt="vide"  id="case34" /></td>
+<td class="blanc"><input class="blanc" type="number" alt="vide"  id="case35" /></td>
+<td class="noir"><input class="noir" type="number" alt="vide"  id="case36" /></td>
+<td class="blanc"><input class="blanc" type="number" alt="vide"  id="case37" /></td>
+</tr>
+ 
+<tr> 
+<td class="blanc"><input class="blanc" type="number" alt="vide"  id="case40" /></td>
+<td class="noir"><input class="noir" type="number" alt="vide"  id="case41" /></td>
+<td class="blanc"><input class="blanc" type="number" alt="vide"  id="case42" /></td>
+<td class="noir"><input class="noir" type="number" alt="vide"  id="case43" /></td>
+<td class="blanc"><input class="blanc" type="number" alt="vide"  id="case44" /></td>
+<td class="noir"><input class="noir" type="number" alt="vide"  id="case45" /></td>
+<td class="blanc"><input class="blanc" type="number" alt="vide"  id="case46" /></td>
+<td class="noir"><input class="noir" type="number" alt="vide"  id="case47" /></td>
+</tr>
+ 
+<tr> 
+<td class="noir"><input class="noir" type="number" alt="vide"  id="case50" /></td>
+<td class="blanc"><input class="blanc" type="number" alt="vide"  id="case51" /></td>
+<td class="noir"><input class="noir" type="number" alt="vide"  id="case52" /></td>
+<td class="blanc"><input class="blanc" type="number" alt="vide"  id="case53" /></td>
+<td class="noir"><input class="noir" type="number" alt="vide"  id="case54" /></td>
+<td class="blanc"><input class="blanc" type="number" alt="vide"  id="case55" /></td>
+<td class="noir"><input class="noir" type="number" alt="vide"  id="case56" /></td>
+<td class="blanc"><input class="blanc" type="number" alt="vide"  id="case57" /></td>
+</tr>
+ 
+<tr>  
+<td class="blanc"><input class="blanc" type="number" alt="piece"  id="case60" /></td>
+<td class="noir"><input class="noir" type="number" alt="piece"  id="case61" /></td>
+<td class="blanc"><input class="blanc" type="number" alt="piece"  id="case62" /></td>
+<td class="noir"><input class="noir" type="number" alt="piece"  id="case63" /></td>
+<td class="blanc"><input class="blanc" type="number" alt="piece"  id="case64" /></td>
+<td class="noir"><input class="noir" type="number" alt="piece"  id="case65" /></td>
+<td class="blanc"><input class="blanc" type="number" alt="piece"  id="case66" /></td>
+<td class="noir"><input class="noir" type="number" alt="piece"  id="case67" /></td>
+</tr>
+ 
+<tr> 
+<td class="noir"><input class="noir" type="number" alt="piece"  id="case70" /></td>
+<td class="blanc"><input class="blanc" type="number" alt="piece"  id="case71" /></td>
+<td class="noir"><input class="noir" type="number" alt="piece"  id="case72" /></td>
+<td class="blanc"><input class="blanc" type="number" alt="piece"  id="case73" /></td>
+<td class="noir"><input class="noir" type="number" alt="piece"  id="case74" /></td>
+<td class="blanc"><input class="blanc" type="number" alt="piece"  id="case75" /></td>
+<td class="noir"><input class="noir" type="number" alt="piece"  id="case76" /></td>
+<td class="blanc"><input class="blanc" type="number" alt="piece"  id="case77" /></td>
+</tr>
+ 
+
+ 
+<script type="text/javascript" src="chess.js"></script>
+</body>
+ 
+</html>
